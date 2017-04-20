@@ -35,7 +35,11 @@
 				templateUrl : 'pages/pricing.html',
 				controller  : 'pricingController'
 			})
-
+			// route for the service page
+			.when('/product', {
+				templateUrl : 'pages/product.html',
+				controller  : 'productController'
+			})
 			// route for the contact page
 			.when('/contact', {
 				templateUrl : 'pages/contact.html',
@@ -62,5 +66,9 @@
 	});
 	
 	sriramApp.controller('servicesController', function($scope) {
+		$scope.message = 'Contact us! JK. This is just a demo.';
+	});
+	
+	sriramApp.controller('productController', function($scope) {
 		$scope.message = 'Contact us! JK. This is just a demo.';
 	});

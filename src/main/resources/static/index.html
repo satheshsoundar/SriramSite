@@ -6,6 +6,36 @@
 <head>
 <title>Sriram Electronics</title>
 <meta charset="utf-8">
+<link href="/content/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/app/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<link href="/content/css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<script src="/app/js/jquery.easydropdown.js"></script>
+<!-- Add fancyBox main JS and CSS files -->
+<script src="/app/js/jquery.magnific-popup.js" type="text/javascript"></script>
+<link href="/content/css/magnific-popup.css" rel="stylesheet" type="text/css">
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+		});
+		</script>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat"
@@ -18,17 +48,79 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script
-	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+	src="/app/angular-1.2.3.js"></script>
 <script
-	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+	src="/app/angular-route-1.2.3.js"></script>
+	<link href="/content/css/component.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<script src="/app/js/jquery.easydropdown.js"></script>
+<!-- Add fancyBox main JS and CSS files -->
+<script src="/app/js/jquery.magnific-popup.js" type="text/javascript"></script>
+<link href="/content/css/magnific-popup.css" rel="stylesheet" type="text/css">
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+		});
+		</script>
+<!----details-product-slider--->
+<!-- Include the Etalage files -->
+<link rel="stylesheet" href="/content/css/etalage.css">
+<script src="/app/js/jquery.etalage.min.js"></script>
+				<!-- Include the Etalage files -->
+				<script>
+						jQuery(document).ready(function($){
+			
+							$('#etalage').etalage({
+								thumb_image_width: 300,
+								thumb_image_height: 400,
+								
+								show_hint: true,
+								click_callback: function(image_anchor, instance_id){
+									alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+								}
+							});
+							// This is for the dropdown list example:
+							$('.dropdownlist').change(function(){
+								etalage_show( $(this).find('option:selected').attr('class') );
+							});
+
+					});
+				</script>
+				<!----//details-product-slider--->	
+<script src="/app/js/easyResponsiveTabs.js" type="text/javascript"></script>
+		    <script type="text/javascript">
+			    $(document).ready(function () {
+			        $('#horizontalTab').easyResponsiveTabs({
+			            type: 'default', //Types: default, vertical, accordion           
+			            width: 'auto', //auto or any width like 600px
+			            fit: true   // 100% fit in a container
+			        });
+			    });
+			   </script>
 <script src="/app/app.js"></script>
 </head>
 
 <!-- define angular controller -->
 <body ng-controller="mainController">
-
+<div>
 	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
+		<div class="container1" style="float:center">
+		<div class="col-md-11">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target="#myNavbar">
@@ -46,6 +138,7 @@
 				</ul>
 			</div>
 		</div>
+		</div>
 	</nav>
 
 	<div id="main">
@@ -55,7 +148,7 @@
 		<div ng-view></div>
 
 	</div>
-
+</div>
 	<!--footer-->
 	<footer class="footer1">
 		<div class="container">
@@ -142,50 +235,7 @@
 				<!-- widgets column left end -->
 
 
-
-				<div class="col-lg-3 col-md-3">
-					<!-- widgets column left -->
-
-					<ul class="list-unstyled clear-margins">
-						<!-- widgets -->
-
-						<li class="widget-container widget_nav_menu">
-							<!-- widgets list -->
-
-							<h1 class="title-widget">Useful links</h1>
-
-							<ul>
-
-
-								<li><a href="#"><i class="fa fa-angle-double-right"></i>
-										Enquiry Form</a></li>
-								<li><a href="#"><i class="fa fa-angle-double-right"></i>
-										Online Test Series</a></li>
-								<li><a href="#"><i class="fa fa-angle-double-right"></i>
-										Grand Tests Series</a></li>
-								<li><a href="#"><i class="fa fa-angle-double-right"></i>
-										Subject Wise Test Series</a></li>
-								<li><a href="#"><i class="fa fa-angle-double-right"></i>
-										Smart Book</a></li>
-								<li><a href="#"><i class="fa fa-angle-double-right"></i>
-										Test Centres</a></li>
-								<li><a href="#"><i class="fa fa-angle-double-right"></i>
-										Admission Form</a></li>
-								<li><a href="#"><i class="fa fa-angle-double-right"></i>
-										Computer Live Test</a></li>
-
-							</ul>
-
-						</li>
-
-					</ul>
-
-
-				</div>
-				<!-- widgets column left end -->
-
-
-				<div class="col-lg-3 col-md-3">
+				<div class="col-lg-4 col-md-4">
 					<!-- widgets column center -->
 
 
@@ -240,7 +290,7 @@
 		</div>
 	</footer>
 	<div class="footer-bottom">
-		<div class="container">
+		<div class="container1">
 			<div class="row">
 				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 					<div class="copyright">© 2017, Sriram Electronics, All rights
